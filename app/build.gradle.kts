@@ -36,6 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -76,4 +79,6 @@ dependencies {
     implementation("androidx.room:room-ktx:2.5.2")
     kapt("androidx.room:room-compiler:2.5.2")
 
+    // ViewBinding delegation
+    implementation("com.github.yogacp:android-viewbinding:1.0.4")
 }
