@@ -1,6 +1,7 @@
 package com.example.dictionary.data.remote.dto
 
 
+import com.example.dictionary.domain.model.Meaning
 import com.google.gson.annotations.SerializedName
 
 data class MeaningDTO(
@@ -12,4 +13,9 @@ data class MeaningDTO(
     val partOfSpeech: String,
     @SerializedName("synonyms")
     val synonyms: List<String>
-)
+) {
+    fun toMeaning() = Meaning(
+        definitions = definitions.map { it.toDefinition() },
+        partOfSpeech = partOfSpeech
+    )
+}
