@@ -2,7 +2,6 @@ package com.example.dictionary.data.remote.dto
 
 
 import com.example.dictionary.data.local.entity.WordInfoEntity
-import com.example.dictionary.domain.model.WordInfo
 import com.google.gson.annotations.SerializedName
 
 data class WordInfoDTO(
