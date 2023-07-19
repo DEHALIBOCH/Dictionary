@@ -1,6 +1,7 @@
 package com.example.dictionary.data.remote.dto
 
 
+import com.example.dictionary.data.local.entity.WordInfoEntity
 import com.example.dictionary.domain.model.WordInfo
 import com.google.gson.annotations.SerializedName
 
@@ -18,7 +19,7 @@ data class WordInfoDTO(
     @SerializedName("word")
     val word: String
 ) {
-    fun toWordInfo() = WordInfo(
+    fun toWordInfoEntity() = WordInfoEntity(
         meanings = meanings.map { it.toMeaning() },
         phonetic = phonetic,
         word = word
