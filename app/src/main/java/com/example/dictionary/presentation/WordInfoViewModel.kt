@@ -19,10 +19,6 @@ class WordInfoViewModel @Inject constructor(
     private val getWordInfo: GetWordInfo
 ) : ViewModel() {
 
-//    private val _searchQuery = MutableLiveData<String>()
-//    val searchQuery: LiveData<String>
-//        get() = _searchQuery
-
     private val _wordInfoState = MutableLiveData<WordInfoState>(WordInfoState())
     val wordInfoState: LiveData<WordInfoState>
         get() = _wordInfoState
@@ -34,7 +30,6 @@ class WordInfoViewModel @Inject constructor(
     private var searchJob: Job? = null
 
     fun onSearch(query: String) {
-//        _searchQuery.value = query
         searchJob?.cancel()
         searchJob = viewModelScope.launch {
             delay(500L)
