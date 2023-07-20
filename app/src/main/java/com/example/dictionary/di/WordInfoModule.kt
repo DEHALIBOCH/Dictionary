@@ -3,7 +3,6 @@ package com.example.dictionary.di
 import android.app.Application
 import androidx.room.Room
 import com.example.dictionary.data.local.Converters
-import com.example.dictionary.data.local.WordInfoDAO
 import com.example.dictionary.data.local.WordInfoDatabase
 import com.example.dictionary.data.remote.DictionaryApi
 import com.example.dictionary.data.repository.WordInfoRepositoryImpl
